@@ -16,8 +16,6 @@ export default class Classes extends Component {
 
     this.setState({classes: response.data});
 
-    console.log(this.state.classes);
-
   }
   
   render() {
@@ -29,8 +27,7 @@ export default class Classes extends Component {
             { title: "Hora inicial", field: "init_hour" },
             { title: "Hora final", field: "final_hour" },
             { title: "Hora inicial", field: "init_hour" },
-            { title: "Estudantes", field: "student"},
-            { title: "Professor", field: "teacher" },
+            { title: "Professor", field: "teacher.name" },
           ]}
           data={this.state.classes}
           title="Aulas"
@@ -64,10 +61,37 @@ export default class Classes extends Component {
               fontSize: '16px',
             },
             rowStyle: {
-              height: '40px',
-              
+              height: '40px'
             }
-          }} 
+          }}
+          
+          detailPanel={[
+            {
+              icon: 'double_arrow',
+              openIcon: 'arrow_drop_down_circle',
+              tooltip: 'Alunos',
+              render: rowData => {
+              
+                var students_class = [];
+
+                rowData.student.map(student => {
+                  students_class.push(
+                    <div className="student" key={student._id}>
+                      <p><span>Nome:</span> {student.name}</p>
+                      <p><span>Identificador:</span> {student.id}</p>
+                      <p><span>Criado em:</span> {student.createdAt}</p>
+                    </div>
+                  )
+                });
+
+                return (
+                  <div className="list_students">
+                    {students_class}
+                  </div>
+                );
+            }
+          }
+        ]} 
         />
       </div>
     );
