@@ -1,0 +1,10 @@
+.background {
+  
+  background-color: #87D1DE;
+  height: calc(100vh - 55px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
