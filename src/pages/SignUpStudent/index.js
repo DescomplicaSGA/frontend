@@ -30,7 +30,10 @@ export default class SignUpStudent extends Component {
       name: this.state.name
     });
 
-    this.createNotification(response.data.type, response.data.msg);
+
+    setTimeout(this.createNotification(response.data.type, response.data.msg), 500);
+
+    this.props.history.push('/alunos');  
 
   }
 

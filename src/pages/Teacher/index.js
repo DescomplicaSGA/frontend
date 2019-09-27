@@ -55,7 +55,7 @@ export default class Teacher extends Component {
           options={{
             pageSize:10,
             headerStyle: {
-              backgroundColor: '#01579b',
+              backgroundColor: '#47B8B6',
               color: '#FFF',
               width: '300px',
               fontSize: '16px',

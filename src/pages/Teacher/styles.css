@@ -39,6 +39,23 @@
   font-weight: bold;
 }
 
+.schedules {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.column {
+  width: 150px;
+}
+
+.column label {
+  font-size: 18px !important;
+  margin-bottom: 10px !important; 
+}
+
+
 
 
 

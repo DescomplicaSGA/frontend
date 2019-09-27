@@ -38,7 +38,6 @@ export default class Student extends Component {
           title="Alunos"
           localization={{
             pagination: {
-              labelDisplayedRows: '{from}-{to} of {count}',
               labelRowsSelect: 'Linhas',
               labelDisplayedRows: '{from}-{to} de {count}'  
             },
