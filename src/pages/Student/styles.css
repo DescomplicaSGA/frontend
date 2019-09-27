@@ -6,5 +6,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
+}
+
+.background .signUp-student {
+  margin-bottom: 30px;
+  margin-left: 1300px;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  color: #FFFFFF;
+  background-color: #2F2359;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.background .signUp-student:hover {
+  background-color: rgb(78, 67, 116);
 }

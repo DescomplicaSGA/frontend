@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './styles.css';
 import axios from '../../services/api';
 import MaterialTable from "material-table";
+import {Link} from 'react-router-dom';
 
 export default class Student extends Component {
 
@@ -24,6 +25,9 @@ export default class Student extends Component {
   render() {
     return (
       <div className="background">
+        <Link to='/cadastrar-estudante' >
+          <button className="signUp-student">Cadastrar novo</button>
+        </Link>
         <MaterialTable
           columns={[
             { title: "Identificador", field: "id" },
@@ -57,7 +61,7 @@ export default class Student extends Component {
           options={{
             pageSize:10,
             headerStyle: {
-              backgroundColor: '#01579b',
+              backgroundColor: '#47B8B6',
               color: '#FFF',
               width: '500px',
               fontSize: '16px',
