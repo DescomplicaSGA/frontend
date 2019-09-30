@@ -17,6 +17,8 @@ export default class Classes extends Component {
 
     this.setState({classes: response.data});
 
+    console.log(this.state);
+
   }
   
   render() {

@@ -34,6 +34,24 @@ export default class App extends Component {
 
   }
 
+  handleForm = async event => {
+
+    event.preventDefault();
+
+    let response = await axios.post('/class', {
+      date: this.state.date,
+      init_hour: this.state.init_hour,
+      final_hour: this.state.final_hour,
+      teacher: this.state.teacher,
+      student: this.state.student
+    });
+
+    console.log(response);
+
+    this.props.history.push('/');
+
+  }
+
   render() {
     return (
       <div className="background">
@@ -45,7 +63,7 @@ export default class App extends Component {
               id="teacher"
               placeholder="Procure pelo professor"
               data={this.teachers}
-              onSelect={(data,record) => console.log(data,record)}
+              onSelect={result => this.setState({...this.state, teacher: result.key})}
             />
             <br/>
             <p className="label_search">Aluno</p>
@@ -53,7 +71,7 @@ export default class App extends Component {
               id="student"
               placeholder="Procure pelo aluno"
               data={this.students}
-              onSelect={result => console.log(result)}
+              onSelect={result => this.setState({...this.state, student: result.key})}
             />
             <div className="schedules">
               <div className="column">
@@ -61,7 +79,7 @@ export default class App extends Component {
                 <input 
                   type="date"
                   value={this.state.day_week}
-                  onChange={event => this.setState({...this.state, day_week: String(event.target.value)})}
+                  onChange={event => this.setState({...this.state, date: String(event.target.value)})}
                 />
               </div>
               <div className="column">
@@ -87,7 +105,7 @@ export default class App extends Component {
               </div>
             </div>
             <div className="footer_button">
-              <button>Cadastrar</button>
+              <button onClick={this.handleForm}>Cadastrar</button>
             </div>
           </div>
         </div>

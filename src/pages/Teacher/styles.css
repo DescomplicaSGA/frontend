@@ -61,3 +61,14 @@ input {
 .body-signUp label {
   margin-bottom: 10px !important;
 }
+
+#select_day_week {
+  border: none;
+  height: 40px;
+  width: 150px;
+  background-color: #FFFFFF;
+}
+
+.column {
+  justify-content: flex-start !important;
+}

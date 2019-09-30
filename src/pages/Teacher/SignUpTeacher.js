@@ -6,12 +6,18 @@ import axios from '../../services/api';
 
 export default class SignUpTeacher extends Component {
 
+  current_date = new Date();
+  year = this.current_date.getFullYear();
+  month = (this.current_date.getMonth() + 1)
+  .toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+  date = this.current_date.getDate();
+
   state = {
     id: '',
     name: '',
-    day_week: '',
-    init_hour: '',
-    final_hour: ''
+    day_week: 'segunda',
+    init_hour: '00:00',
+    final_hour: '00:00'
   }
 
   createNotification = (type, message) => {
@@ -76,11 +82,20 @@ export default class SignUpTeacher extends Component {
             <div className="schedules">
               <div className="column">
                 <label htmlFor="">Dia da semana</label>
-                <input 
-                  type="date"
-                  value={this.state.day_week}
-                  onChange={event => this.setState({...this.state, day_week: String(event.target.value)})}
-                />
+                <select 
+                  value={this.state.day_week} 
+                  onChange={result => {
+                      this.setState({...this.state, day_week: result.target.value})
+                  }} 
+                  id="select_day_week">
+                  <option value='segunda'>Segunda-feira</option>
+                  <option value='terça'>Terça-feira</option>
+                  <option value='quarta'>Quarta-feira</option>
+                  <option value='quinta'>Quinta-feira</option>
+                  <option value='sexta'>Sexta-feira</option>
+                  <option value='sabado'>Sabado</option>
+                  <option value='domingo'>Domingo</option>
+                </select>
               </div>
               <div className="column">
                 <label htmlFor="">Horario início</label>
