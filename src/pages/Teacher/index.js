@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './styles.css';
 import axios from '../../services/api';
 import MaterialTable from "material-table";
+import {Link} from 'react-router-dom';
 
 export default class Teacher extends Component {
 
@@ -23,6 +24,7 @@ export default class Teacher extends Component {
   render() {
     return (
       <div className="background">
+        <Link to="/cadastrar-professor"><button className="signUp-teacher">Cadastrar novo</button></Link>
         <MaterialTable
           columns={[
             { title: "Identificador", field: "id" },
