@@ -9,6 +9,30 @@
 
 }
 
+.body {
+  height: 90%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.signUp-teacher {
+  margin-bottom: 10px;
+  height: 40px;
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 18px;
+  background-color: #2F2359;
+  font-weight: bold;
+  cursor: pointer; 
+}
+
+.signUp-teacher:hover {
+  background-color: rgb(78, 67, 116);
+}
+
 .body-signUp {
   width: 60% !important;
   height: 95% !important;
@@ -37,61 +61,3 @@ input {
 .body-signUp label {
   margin-bottom: 10px !important;
 }
-
-/* .signUp-teacher {
-  width: 200px;
-  font-size: 20px;
-  height: 40px;
-  border: none;
-  border-radius: 10px;
-  background-color: #191B42;
-  color: #FFFFFF;
-  font-weight: bold;
-  margin-left: 700px;
-  margin-bottom: 30px;
-  cursor: pointer;
-} */
-/* 
-.list_students {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.student {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  height: 50px;
-  align-items: center;
-  padding: 20px 120px;
-  justify-content: space-between;
-  border: 1px solid rgb(191, 204, 207);
-  background-color: #D5E7EB;
-}
-
-.student p {
-  font-size: 16px;
-}
-
-.student p span {
-  font-size: 18px;
-  margin-right: 5px;
-  font-weight: bold;
-}
-
-.column {
-  width: 150px;
-}
-
-.column label {
-  font-size: 18px !important;
-  margin-bottom: 10px !important; 
-} */
-
-
-
-
-

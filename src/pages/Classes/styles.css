@@ -26,6 +26,32 @@
   margin-bottom: 30px;
 }
 
+.box_table {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.signUp-class {
+  border: none;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 200px; 
+  border-radius: 10px;
+  background-color: #191B42;
+  color: #FFFFFF;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.signUp-class:hover {
+  background-color: rgb(78, 67, 116);
+}
+
 .schedules {
   display: flex;
   flex-direction: row;

@@ -24,8 +24,9 @@ export default class Teacher extends Component {
   render() {
     return (
       <div className="background">
-        <Link to="/cadastrar-professor"><button className="signUp-teacher">Cadastrar novo</button></Link>
-        <MaterialTable
+        <div className="body">
+          <Link to="/cadastrar-professor"><button className="signUp-teacher">Cadastrar novo</button></Link>
+          <MaterialTable
           columns={[
             { title: "Identificador", field: "id" },
             { title: "Nome", field: "name" },
@@ -55,7 +56,7 @@ export default class Teacher extends Component {
             }
           }}
           options={{
-            pageSize:10,
+            pageSize:7,
             headerStyle: {
               backgroundColor: '#47B8B6',
               color: '#FFF',
@@ -67,7 +68,8 @@ export default class Teacher extends Component {
               
             }
           }} 
-        />
+          />
+        </div>      
       </div>
     );
   }

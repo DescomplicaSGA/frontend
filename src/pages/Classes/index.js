@@ -22,7 +22,8 @@ export default class Classes extends Component {
   render() {
     return (
       <div className="background">
-        <Link to="/cadastrar-aula"><button className="signUp-class">Cadastrar novo</button></Link>
+        <div className="box_table">
+        <Link to="/cadastrar-aula"><button className="signUp-teacher">Cadastrar novo</button></Link>
         <MaterialTable
           columns={[
             { title: "Data", field: "date" },
@@ -55,7 +56,7 @@ export default class Classes extends Component {
             }
           }}
           options={{
-            pageSize:10,
+            pageSize: 7,
             headerStyle: {
               backgroundColor: '#47B8B6',
               color: '#FFF',
@@ -92,9 +93,10 @@ export default class Classes extends Component {
                   </div>
                 );
             }
-          }
-        ]} 
-        />
+            }
+          ]} 
+          />
+        </div>
       </div>
     );
   }
